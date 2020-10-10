@@ -1,0 +1,5 @@
+export const ItemTypes = {
+  SHORT_TEXT: 'INPUT_SHORT_TEXT',
+  LONG_TEXT: 'INPUT_LONG_TEXT',
+  DATE_PICKER: 'INPUT_DATE_PICKER'
+}

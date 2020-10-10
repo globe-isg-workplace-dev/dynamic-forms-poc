@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&family=Secular+One&display=swap');
+
+$font-primary: 'Secular One', sans-serif;
+$font-secondary: 'Rubik', sans-serif;
+
+h1, h2, h3, h4, h5, h6{
+  font-family: $font-primary;
+  color: $font-white;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+p, a, button {
+  font-family: $font-secondary;
+  color: $font-white;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+  display: block;
+}

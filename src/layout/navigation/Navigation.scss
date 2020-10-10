@@ -1,0 +1,14 @@
+@import '../../themes/colors.scss';
+
+.navigation{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  -webkit-box-shadow: -7px 15px 33px -19px rgba(0,0,0,0.75);
+  -moz-box-shadow: -7px 15px 33px -19px rgba(0,0,0,0.75);
+  box-shadow: -7px 15px 33px -19px rgba(0,0,0,0.75);
+  position: relative;
+  z-index: 2;
+}

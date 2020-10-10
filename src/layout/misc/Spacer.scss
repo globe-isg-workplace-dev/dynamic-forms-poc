@@ -1,0 +1,8 @@
+@import '../../themes/colors.scss';
+
+.spacer{
+  width: 128px;
+  height: 4px;
+  background: $theme-accent-1-lighter;
+  margin: 8px 0px 8px 0px;
+}

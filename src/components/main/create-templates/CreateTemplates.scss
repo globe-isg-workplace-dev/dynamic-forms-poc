@@ -1,0 +1,24 @@
+@import '../../../themes/colors.scss';
+
+.form-components-container{
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.form-components-origin{
+  width: 100%;
+  background: $theme-primary-darken;
+  margin: 16px 24px 16px 0px;
+}
+.form-components-destination{
+  width: 100%;
+  background: $theme-primary-darken;
+  margin: 16px 24px 16px 0px;
+  padding: 16px;
+}
+.form-components-item{
+  width: 100%;
+  background: $theme-primary-darken;
+  padding: 16px;
+  cursor: pointer;
+}

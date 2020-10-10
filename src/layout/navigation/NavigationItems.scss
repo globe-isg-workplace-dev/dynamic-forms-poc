@@ -1,0 +1,14 @@
+@import '../../themes/colors.scss';
+
+.links{
+  display: flex;
+  margin-left: auto;
+  margin-right: 16px;
+}
+.link{
+  padding: 24px;
+  text-decoration: none;
+}
+.link:hover{
+  background: $theme-primary-darken;
+}

@@ -1,0 +1,31 @@
+@import '../../themes/colors.scss';
+
+.draggable-item{
+  width: 100%;
+  background: $theme-primary-darken;
+  padding: 16px;
+  cursor: pointer;
+  border: 2px solid $theme-primary-darken;
+}
+
+.draggable-item-dragging{
+  width: 100%;
+  background: $theme-primary-darken;
+  padding: 16px;
+  cursor: pointer;
+  border: 2px solid $theme-accent-1;
+  transition: border 200ms;
+  opacity: 1;
+  transition-timing-function: cubic-bezier(.1,.68,.89,.64);
+}
+
+.draggable-item-active{
+  width: 100%;
+  background: $theme-accent-1;
+  color: $font-white;
+  padding: 16px;
+  cursor: pointer;
+  transition: background-color 200ms;
+  opacity: 1;
+  transition-timing-function: cubic-bezier(.1,.68,.89,.64);
+}

@@ -1,0 +1,17 @@
+@import '../../../themes/colors.scss';
+
+.target{
+  width: 100%;
+  background: $theme-primary-darken;
+  margin: 16px 24px 16px 0px;
+  padding: 16px;
+}
+.target-over{
+  width: 100%;
+  background: $theme-primary-darken;
+  margin: 16px 24px 16px 0px;
+  padding: 16px;
+  border: 2px solid $theme-accent-1;
+  transition: border 200ms;
+  transition-timing-function: cubic-bezier(.1,.68,.89,.64);
+}

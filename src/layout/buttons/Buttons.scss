@@ -1,0 +1,13 @@
+@import '../../themes/colors.scss';
+
+.btn-primary{
+  width: auto;
+  height: auto;
+  display: flex;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background: lighten($theme-primary, $amount: 10%);
+  border-style: none;
+  border-bottom: 5px solid $theme-primary-darken;
+  color: white;
+  cursor: pointer;
+}

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './CreateTemplates.scss';
+import { DragDropContext, DropResult } from 'react-beautiful-dnd'; 
 import { ItemTypes } from '../../../utils/Items';
 import CreateTemplatesDragOrigin from './CreateTemplatesDragOrigin';
 import CreateTemplatesDragTarget from './CreateTemplatesDragTarget';
@@ -27,11 +28,17 @@ const CreateTemplatesDragForm: React.FunctionComponent<ICreateTemplatesDragFormP
     }
   ])
 
+  const onDragEnd = (result: DropResult) => {
+    console.log(result);
+  }
+
   return  (
       <div className='form-components-container'>
-        <CreateTemplatesDragOrigin items={items}/>
-
-        <CreateTemplatesDragTarget />
+        <DragDropContext
+          onDragEnd={onDragEnd}>
+          <CreateTemplatesDragOrigin items={items} id='ORIGIN'/>
+          <CreateTemplatesDragTarget id='TARGET'/>
+        </DragDropContext>
       </div>
   );
 };

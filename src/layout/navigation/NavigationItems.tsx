@@ -14,8 +14,8 @@ const NavigationItems: React.FunctionComponent<INavigationItemsProps> = (props) 
   return (
     <div className='links'>
       {
-        props.items.map((link_item)=> {
-          return (<a className='link' href={link_item.link}>{link_item.title}</a>)
+        props.items.map((link_item, index)=> {
+          return (<a key={index} className='link' href={link_item.link}>{link_item.title}</a>)
         })
       }
     </div>

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './CreateTemplatesDragOrigin.scss';
 import DraggableItem from '../../../layout/draggables/DraggableItem';
-import { Droppable, DroppableProvided } from 'react-beautiful-dnd';
+import { Droppable, DroppableProvided, DroppableStateSnapshot } from 'react-beautiful-dnd';
 
 interface ICreateTemplatesDragOriginProps {
   items: Array<any>
@@ -11,9 +11,10 @@ interface ICreateTemplatesDragOriginProps {
 const CreateTemplatesDragOrigin: React.FunctionComponent<ICreateTemplatesDragOriginProps> = (props) => {
   return (
     <Droppable
-      droppableId={props.id}>
+      droppableId={props.id}
+      isDropDisabled={true}>
       {
-        (provided: DroppableProvided)=>{
+        (provided: DroppableProvided, snapshot: DroppableStateSnapshot)=>{
           return (
             <div className='origin'
               ref={provided.innerRef}
@@ -25,8 +26,7 @@ const CreateTemplatesDragOrigin: React.FunctionComponent<ICreateTemplatesDragOri
                       key={item.id}
                       id={item.id}
                       index={index} 
-                      title={item.title} 
-                      item_type={item.item_type} 
+                      title={item.title}
                       />
                   )
                 })

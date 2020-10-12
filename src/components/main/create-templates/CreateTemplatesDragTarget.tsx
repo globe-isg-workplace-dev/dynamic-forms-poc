@@ -1,12 +1,18 @@
 import * as React from 'react';
 import './CreateTemplatesDragTarget.scss';
+import { connect, useSelector } from 'react-redux';
+
 import { Droppable, DroppableProvided } from 'react-beautiful-dnd';
+import { RootState } from '../../../rtk/RootReducer';
 
 interface ICreateTemplatesDragTargetProps {
-  id: string
+  id: string,
 }
 
 const CreateTemplatesDragTarget: React.FunctionComponent<ICreateTemplatesDragTargetProps> = (props) => {
+  
+  //const dispatch = useDispatch();
+  const { items_dropped } = useSelector((state: RootState) => state.form_items);
 
   return (
     <Droppable
@@ -16,8 +22,7 @@ const CreateTemplatesDragTarget: React.FunctionComponent<ICreateTemplatesDragTar
           return (
             <div className='target'
               ref={provided.innerRef}>
-              <h5>Drag your components here.</h5>
-
+              {items_dropped.length === 0 ? <h4>Drag your form components here</h4> : items_dropped[0]}
               {provided.placeholder}
             </div>
           )
@@ -27,4 +32,6 @@ const CreateTemplatesDragTarget: React.FunctionComponent<ICreateTemplatesDragTar
   );
 };
 
-export default CreateTemplatesDragTarget;
+const mapState = (state: any) => state;
+
+export default connect(mapState)(CreateTemplatesDragTarget);

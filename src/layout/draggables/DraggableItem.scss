@@ -1,31 +1,41 @@
 @import '../../themes/colors.scss';
+@import '../../themes/typography.scss';
 
 .draggable-item{
   width: 100%;
-  background: $theme-primary-darken;
+  background-color: $theme-primary-darken;
   padding: 16px;
   cursor: pointer;
   border: 2px solid $theme-primary-darken;
-}
-
-.draggable-item-dragging{
-  width: 100%;
-  background: $theme-primary-darken;
-  padding: 16px;
-  cursor: pointer;
-  border: 2px solid $theme-accent-1;
-  transition: border 200ms;
-  opacity: 1;
-  transition-timing-function: cubic-bezier(.1,.68,.89,.64);
+  display: flex;
+  align-items: center;
 }
 
 .draggable-item-active{
-  width: 100%;
-  background: $theme-accent-1;
+  width: 50%;
+  background-color: $theme-accent-1;
   color: $font-white;
   padding: 16px;
   cursor: pointer;
-  transition: background-color 200ms;
   opacity: 1;
-  transition-timing-function: cubic-bezier(.1,.68,.89,.64);
+  transition: background-color 16s cubic-bezier(.1,.68,.89,.64);
+}
+
+.draggable-remove-btn{
+  margin-left: auto;
+  border: none;
+  color: white;
+  background: $theme-accent-1;
+  padding: 8px;
+}
+
+.draggable-input{
+  width: 50%;
+  padding: 4px;
+  font-family: $font-primary;
+}
+
+.draggable-type-text{
+  font-size: 0.6rem;
+  margin-top: 4px;
 }

@@ -1,24 +1,41 @@
 @import '../../../themes/colors.scss';
+@import '../../../themes/typography.scss';
 
 .form-components-container{
   width: 100%;
   height: auto;
   display: flex;
+  flex-wrap: wrap;
 }
-.form-components-origin{
+.form-droppables{
   width: 100%;
-  background: $theme-primary-darken;
-  margin: 16px 24px 16px 0px;
+  display: flex;
+  flex-direction: row;
 }
-.form-components-destination{
-  width: 100%;
+.form-preview{
+  width: 50%;
+  height: auto;
   background: $theme-primary-darken;
-  margin: 16px 24px 16px 0px;
-  padding: 16px;
+  padding: 8px;
+  margin: 16px auto 16px auto;
 }
-.form-components-item{
-  width: 100%;
-  background: $theme-primary-darken;
-  padding: 16px;
-  cursor: pointer;
+.form-preview-input-container{
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+}
+.INPUT_SHORT_TEXT, .INPUT_LONG_TEXT, .INPUT_DATE_PICKER {
+  padding: 4px;
+  width: 50%;
+  font-family: $font-primary;
+  margin: 8px 0px 8px 0px;
+}
+.form-title-input {
+  padding: 8px;
+  background: transparent;
+  color: white;
+  border: none;
+  font-family: $font-primary;
+  outline: none;
+  border-bottom: 2px solid $theme-accent-1;
 }

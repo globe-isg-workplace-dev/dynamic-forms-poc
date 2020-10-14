@@ -3,13 +3,15 @@
 .target{
   width: 100%;
   background: $theme-primary-darken;
-  margin: 16px 24px 16px 0px;
+  margin: 16px 0px 16px 0px;
   padding: 16px;
+  border: 2px solid transparent;
+
 }
 .target-over{
   width: 100%;
   background: $theme-primary-darken;
-  margin: 16px 24px 16px 0px;
+  margin: 16px 0px 16px 0px;
   padding: 16px;
   border: 2px solid $theme-accent-1;
   transition: border 200ms;

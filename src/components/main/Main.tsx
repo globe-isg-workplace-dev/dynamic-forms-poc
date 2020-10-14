@@ -9,6 +9,7 @@ import Home from './home/Home';
 import MyTemplates from './my-templates/MyTemplates';
 import CreateTemplates from './create-templates/CreateTemplates';
 import './Main.scss';
+import CreateTemplatesFormPreview from './create-templates/CreateTemplatesFormPreview';
 
 interface IMainProps {
 
@@ -28,6 +29,9 @@ const Main: React.FunctionComponent<IMainProps> = (props) => {
           </Route>
           <Route exact path='/app/templates/create'>
             <CreateTemplates />
+          </Route>
+          <Route exact path='/app/templates/preview'>
+            <CreateTemplatesFormPreview />
           </Route>
         </Switch>
       </Router>

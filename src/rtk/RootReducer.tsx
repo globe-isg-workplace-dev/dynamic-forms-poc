@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import { FormItemsSlice } from "./FormItemsSlice";
+import FormItemsSlice from "./FormItemsSlice";
 
 const RootReducer = combineReducers({
-  form_items: FormItemsSlice.reducer
+  form_items: FormItemsSlice
 });
 
 export type RootState = ReturnType<typeof RootReducer>

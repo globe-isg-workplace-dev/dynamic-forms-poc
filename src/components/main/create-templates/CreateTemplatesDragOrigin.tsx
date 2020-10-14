@@ -25,7 +25,9 @@ const CreateTemplatesDragOrigin: React.FunctionComponent<ICreateTemplatesDragOri
                     <DraggableItem 
                       key={item.id}
                       id={item.id}
-                      index={index} 
+                      index={index}
+                      type={item.type}
+                      field_name={item.field_name}
                       title={item.title}
                       />
                   )
